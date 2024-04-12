@@ -27,12 +27,11 @@ console.log(
   typeof stringifyResult
 );
 
-const bookJSON =
-  '{"isbn": "978-3-16-148410-0", "title": "Hello There", "author": "John Smith"}';
+const student = '{"number id": "306050", "name": "Sabrina"}';
 
-console.log('value of bookJSON: ', bookJSON, 'typeof: ', typeof bookJSON);
+console.log('value of student: ', student, 'typeof: ', typeof student);
 
-const parseResult = JSON.parse(bookJSON);
+const parseResult = JSON.parse(student);
 
 console.log(
   'value of parseResult: ',
