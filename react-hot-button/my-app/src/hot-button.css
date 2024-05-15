@@ -1,0 +1,44 @@
+button {
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  border-style: solid;
+  border-color: #555;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+div {
+  margin-top: 200px;
+}
+
+.white {
+  background-color: white;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.magenta {
+  background-color: rgb(128, 0, 49);
+  color: white;
+}
+
+.purple {
+  background-color: purple;
+  color: white;
+}
