@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './toggleSwitch.css';
 import './App.css';
-import { ToggleSwitch } from './toggleSwitch';
+import { ToggleSwitch } from './ToggleSwitch';
 
 export default function App() {
   let className = 'toggle-switch';
