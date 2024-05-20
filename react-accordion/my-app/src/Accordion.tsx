@@ -1,21 +1,21 @@
 import { TopicCard } from './TopicCard';
 import { useState } from 'react';
 
-type Topics = {
+export type Topic = {
   id: number;
   title: string;
   content: string;
 };
 
 type Props = {
-  topics: Topics[];
+  topics: Topic[];
 };
 
 export function Accordion({ topics }: Props) {
-  const [openTopicId, setOpenTopicId] = useState<number | null>(null);
+  const [openTopicId, setOpenTopicId] = useState<number>(0);
 
   function handleToggle(id: number) {
-    setOpenTopicId(openTopicId === id ? null : id);
+    setOpenTopicId(openTopicId === id ? 0 : id);
   }
 
   return (

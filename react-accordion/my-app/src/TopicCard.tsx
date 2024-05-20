@@ -1,10 +1,5 @@
 import './TopicCard.css';
-
-type Topic = {
-  id: number;
-  title: string;
-  content: string;
-};
+import { Topic } from './Accordion.tsx';
 
 type Props = {
   topic: Topic;
