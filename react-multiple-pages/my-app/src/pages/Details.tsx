@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { type Item, readItem } from '../lib/read';
-import { Link, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export function Details() {
   const [item, setItem] = useState<Item>();
@@ -8,6 +8,7 @@ export function Details() {
   const [error, setError] = useState<unknown>();
 
   const { itemId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function loadItem(itemId: number) {
@@ -35,14 +36,21 @@ export function Details() {
       </div>
     );
   }
+
+  function handleClick(): void {
+    alert('Going to Dashboard');
+    navigate('/');
+  }
   const { name, image, description } = item;
   return (
     <div className="container">
       <div className="flex flex-col">
         <div className="flex-auto p-6">
-          <Link to="/" className="p-3 text-gray-600 cursor-pointer">
+          <button
+            onClick={handleClick}
+            className="p-3 text-gray-600 cursor-pointer">
             &lt; Back to Dashboard
-          </Link>
+          </button>
           <div className="flex flex-wrap mb-4">
             <div className="w-full sm:w-1/2 md:w-2/5 pt-2 px-4">
               <img
