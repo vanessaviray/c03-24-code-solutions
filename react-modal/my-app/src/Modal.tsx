@@ -11,7 +11,8 @@ export function Modal({ children, isOpen, onClose }: Props) {
 
   useEffect(() => {
     isOpen ? modal.current?.showModal() : modal.current?.close();
-  });
+  }),
+    [isOpen];
 
   function handleKeyDown(event: React.KeyboardEvent<HTMLDialogElement>) {
     event.key === 'Escape' && onClose();
