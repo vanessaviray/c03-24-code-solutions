@@ -1,16 +1,28 @@
-type Props = {
-  className: string;
-  onClick: () => void;
-  stateLabel: string;
-};
+import { useState } from 'react';
 
-export function ToggleSwitch({ className, onClick, stateLabel }: Props) {
+export function ToggleSwitch() {
+  const [isOn, setIsOn] = useState(false);
+  let className = 'toggle-switch';
+  let label = 'OFF';
+
+  function handleToggle() {
+    setIsOn(!isOn);
+  }
+
+  if (isOn) {
+    className = 'toggle-switch is-on slider';
+    label = 'ON';
+  } else {
+    className = 'toggle-switch';
+    label = 'OFF';
+  }
+
   return (
-    <div onClick={onClick} className={className}>
-      <div className="slider">
+    <div className={className}>
+      <div className="slider" onClick={handleToggle}>
         <div className="switch"></div>
       </div>
-      <span className="state-label">{stateLabel}</span>
+      <span className="state-label">{label}</span>
     </div>
   );
 }
