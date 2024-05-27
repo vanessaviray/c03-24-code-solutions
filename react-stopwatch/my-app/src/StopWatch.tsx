@@ -6,39 +6,39 @@ export function StopWatch() {
   const [elapsedSecs, setElapsedSecs] = useState(0);
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
 
-  const startTimer = () => {
+  function startTimer() {
     if (!intervalId) {
       const id = setInterval(() => {
         setElapsedSecs((prevElapsedSecs) => prevElapsedSecs + 1);
       }, 1000);
       setIntervalId(id);
     }
-  };
+  }
 
-  const pauseTimer = () => {
+  function pauseTimer() {
     if (intervalId) {
       clearInterval(intervalId);
       setIntervalId(null);
     }
-  };
+  }
 
-  const resetTimer = () => {
+  function resetTimer() {
     if (!intervalId) {
       setElapsedSecs(0);
     }
-  };
+  }
 
-  const handlePlayClick = () => {
+  function handlePlayClick() {
     startTimer();
-  };
+  }
 
-  const handlePauseClick = () => {
+  function handlePauseClick() {
     pauseTimer();
-  };
+  }
 
-  const handleStopwatchClick = () => {
+  function handleStopwatchClick() {
     resetTimer();
-  };
+  }
 
   return (
     <div className="stopwatch">
