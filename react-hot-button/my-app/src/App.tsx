@@ -1,41 +1,31 @@
-import './hot-button.css';
 import './App.css';
-import { HotButton } from './hot-button';
-import { ClickCount } from './click-count';
+import './HotButton.css';
+import { HotButton } from './HotButton.tsx';
 import { useState } from 'react';
-
-const buttonText = 'Hot Button';
-let className = 'purple';
 
 export default function App() {
   const [count, setCount] = useState(0);
+  const [className, setClassName] = useState('');
 
-  const handleClick = () => {
+  function handleClick() {
     setCount(count + 1);
 
-    if (count < 2) {
-      className = 'purple';
-    } else if (count < 5) {
-      className = 'magenta';
-    } else if (count < 8) {
-      className = 'red';
-    } else if (count < 11) {
-      className = 'orange';
-    } else if (count < 14) {
-      className = 'yellow';
-    } else {
-      className = 'white';
+    if (count === 2 && count < 5) {
+      setClassName('purple');
+    } else if (count === 5 && count < 8) {
+      setClassName('magenta');
+    } else if (count === 8 && count < 11) {
+      setClassName('red');
+    } else if (count === 11 && count < 14) {
+      setClassName('orange');
+    } else if (count === 14 && count < 17) {
+      setClassName('yellow');
+    } else if (count === 17 && count < 20) {
+      setClassName('white');
     }
-  };
+  }
 
   return (
-    <div>
-      <HotButton
-        className={className}
-        buttonText={buttonText}
-        onClick={handleClick}
-      />
-      <ClickCount count={count} />
-    </div>
+    <HotButton count={count} onClick={handleClick} className={className} />
   );
 }
