@@ -1,0 +1,15 @@
+.topic-title {
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 5px;
+}
+
+.topic-content {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
