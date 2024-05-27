@@ -1,5 +1,5 @@
-import { TopicCard } from './TopicCard';
 import { useState } from 'react';
+import { TopicCard } from './TopicCard.tsx';
 
 export type Topic = {
   id: number;
@@ -12,22 +12,20 @@ type Props = {
 };
 
 export function Accordion({ topics }: Props) {
-  const [openTopicId, setOpenTopicId] = useState<number>(0);
+  const [openTopicId, setOpenTopicId] = useState(0);
 
   function handleToggle(id: number) {
     setOpenTopicId(openTopicId === id ? 0 : id);
   }
 
-  return (
-    <div className="accordion">
-      {topics.map((topic) => (
-        <TopicCard
-          key={topic.id}
-          topic={topic}
-          isOpen={topic.id === openTopicId}
-          onToggle={handleToggle}
-        />
-      ))}
-    </div>
-  );
+  const topicCards = topics.map((topic) => (
+    <TopicCard
+      onToggle={handleToggle}
+      key={topic.id}
+      topic={topic}
+      isOpen={topic.id === openTopicId}
+    />
+  ));
+
+  return <div className="accordion">{topicCards}</div>;
 }

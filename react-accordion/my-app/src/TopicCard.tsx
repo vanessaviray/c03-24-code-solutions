@@ -1,5 +1,5 @@
+import { type Topic } from './Accordion.tsx';
 import './TopicCard.css';
-import { Topic } from './Accordion.tsx';
 
 type Props = {
   topic: Topic;
@@ -9,11 +9,11 @@ type Props = {
 
 export function TopicCard({ topic, isOpen, onToggle }: Props) {
   return (
-    <>
+    <div>
       <div className="topic-title" onClick={() => onToggle(topic.id)}>
         {topic.title}
       </div>
       {isOpen && <div className="topic-content">{topic.content}</div>}
-    </>
+    </div>
   );
 }
