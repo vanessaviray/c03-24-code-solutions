@@ -1,16 +1,14 @@
 type Props = {
-  items: string[];
+  list: string[];
 };
 
-export function ListItems({ items }: Props) {
+export function ListItems({ list }: Props) {
+  const searchResults = list.map((item, index) => <li key={index}>{item}</li>);
+
   return (
     <div>
-      {items.length > 0 ? (
-        <ul>
-          {items.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
+      {list.length > 0 ? (
+        <ul>{searchResults}</ul>
       ) : (
         <p>No matching items found.</p>
       )}

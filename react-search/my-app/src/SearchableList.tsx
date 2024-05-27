@@ -1,5 +1,5 @@
-import { SearchBar } from './SearchBar';
-import { ListItems } from './ListItems';
+import { SearchBar } from './SearchBar.tsx';
+import { ListItems } from './ListItems.tsx';
 import { useState } from 'react';
 
 type Props = {
@@ -9,8 +9,8 @@ type Props = {
 export function SearchableList({ quotes }: Props) {
   const [input, setInput] = useState('');
 
-  function handleSearchChange(event: React.ChangeEvent<HTMLInputElement>) {
-    setInput(event.target.value);
+  function handleChange(value: string) {
+    setInput(value);
   }
 
   const filteredQuotes = quotes.filter((quote) =>
@@ -19,8 +19,8 @@ export function SearchableList({ quotes }: Props) {
 
   return (
     <div>
-      <SearchBar onSearchChange={handleSearchChange} input={input} />
-      <ListItems items={filteredQuotes} />
+      <SearchBar onChange={handleChange} input={input} />
+      <ListItems list={filteredQuotes} />
     </div>
   );
 }

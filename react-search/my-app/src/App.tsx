@@ -1,4 +1,4 @@
-import { SearchableList } from './SearchableList';
+import { SearchableList } from './SearchableList.tsx';
 
 const quotes = [
   'Yer a wizard Harry.',
