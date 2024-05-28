@@ -1,0 +1,450 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 50px auto;
+  width: 820px;
+}
+
+button {
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* navbar */
+
+.navbar-contents {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.navbar-contents img {
+  max-width: 100px;
+}
+
+.navbar-contents button {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  color: #b5b5b5;
+  background-color: white;
+  border: none;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.navbar-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f8;
+  margin-top: 10px;
+  width: 100%;
+  height: 1px;
+}
+
+/* hero section */
+
+.hero-section .img-container {
+  position: relative;
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.hero-section img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-section .column-heading-body-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  color: white;
+  margin-left: 50px;
+  width: 43.5%;
+  height: 350px;
+  z-index: 3;
+}
+
+.hero-section h2 {
+  font-family: 'Tiempos Headline', serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.hero-section p {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 160%;
+  position: relative;
+  bottom: 16px;
+}
+
+.hero-section .overlay {
+  background-color: rgba(75, 69, 69, 0.3);
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  right: 50px;
+  left: 50px;
+  z-index: 2;
+}
+
+/* care-at-your-command-section-section */
+
+.care-at-your-command-section img {
+  flex-basis: calc(100% / 2);
+  padding: 50px;
+}
+
+.care-at-your-command-section {
+  display: flex;
+  flex-direction: row;
+  background-color: #fafafa;
+  width: 100%;
+  height: 450px;
+}
+
+.care-at-your-command-section .column-heading-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: calc(100% / 2);
+  padding: 50px;
+  height: 450px;
+}
+
+.care-at-your-command-section h3 {
+  font-family: 'Tiempos Headline', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #50514f;
+  position: relative;
+  top: 20px;
+}
+
+.care-at-your-command-section p {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  color: #787878;
+  line-height: 160%;
+}
+
+.care-at-your-command-section button {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  background-color: #fafafa;
+  color: #294564;
+}
+
+.care-at-your-command-section .quote {
+  font-family: 'Tiempos Headline', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 11px;
+  color: #787878;
+  line-height: 160%;
+}
+
+.care-at-your-command-section .quote-credit {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  color: #787878;
+  line-height: 160%;
+  position: relative;
+  bottom: 16px;
+}
+
+/* performance-improvement-section */
+
+.performance-improvement-section {
+  display: flex;
+  flex-direction: row;
+  background-color: #fafafa;
+  width: 100%;
+  height: 420px;
+}
+
+.performance-improvement-section .image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: calc(100% / 2);
+  padding-left: 50px;
+  height: 420px;
+}
+
+.performance-improvement-section img {
+  max-width: 100%;
+}
+
+.performance-improvement-section .column-heading-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: calc(100% / 2);
+  padding-left: 80px;
+  padding-right: 50px;
+  height: 420px;
+}
+
+.performance-improvement-section h3 {
+  font-family: 'Tiempos Headline', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #50514f;
+  position: relative;
+  top: 20px;
+}
+
+.performance-improvement-section p {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  color: #787878;
+  line-height: 160%;
+}
+
+.performance-improvement-section button {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  background-color: #fafafa;
+  color: #294564;
+}
+
+.performance-improvement-section .quote {
+  font-family: 'Tiempos Headline', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 10px;
+  color: #787878;
+  line-height: 160%;
+}
+
+.performance-improvement-section .quote-credit {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  color: #787878;
+  line-height: 160%;
+  position: relative;
+  bottom: 16px;
+}
+
+/* learn-more-section */
+
+.learn-more-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.learn-more-section .heading-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.learn-more-section h3 {
+  font-family: 'Tiempos Headline', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #787878;
+}
+
+.learn-more-section p {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  color: #787878;
+  position: relative;
+  bottom: 16px;
+}
+
+.learn-more-section button {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: white;
+  background-color: #284464;
+  border-radius: 3px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 40px;
+  position: relative;
+  top: 18px;
+}
+
+/* footer-section-one */
+
+.footer-section-one {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  background-color: #525351;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+  height: 290px;
+}
+
+.column-logo-address {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 90px;
+}
+
+.column-company {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 20px;
+}
+
+.column-product {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  position: relative;
+  bottom: 20px;
+}
+
+.footer-section-one img {
+  width: 100px;
+}
+
+.footer-section-one p {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 160%;
+  position: relative;
+  top: 20px;
+}
+
+.footer-section-one h4 {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  left: 6px;
+}
+
+.footer-section-one button {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  background-color: #525351;
+  text-align: left;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: white;
+  position: relative;
+  bottom: 8px;
+}
+
+/* footer-section-two */
+
+.footer-section-two {
+  display: flex;
+  align-items: center;
+  background-color: #fafafa;
+  padding-left: 50px;
+  width: 100%;
+  height: 90px;
+}
+
+.privacy-contact-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.privacy-contact-buttons button {
+  font-size: 12px;
+  color: #787878;
+  background-color: #fafafa;
+  padding: 12px;
+}
+
+/* pseudo class for buttons */
+
+.navbar-contents button:hover {
+  color: #294564;
+}
+
+.navbar-contents button:last-child {
+  color: white;
+  background-color: #294564;
+  border-radius: 3px;
+  width: 90px;
+  height: 30px;
+}
+
+.hero-section button:hover {
+  background-color: #3c6484;
+}
+
+.row-locations button:hover {
+  color: #294564;
+}
+
+.learn-more-section button:hover {
+  background-color: #3c6484;
+}
+
+.footer-section-one button:hover {
+  color: #525351;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.privacy-contact-buttons button:hover {
+  color: #284464;
+}
+
+.navbar-contents button:last-child:hover {
+  background-color: #3c6484;
+}
