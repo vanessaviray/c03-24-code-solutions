@@ -3,27 +3,27 @@ import { Carousel } from './Carousel.tsx';
 
 const images = [
   {
-    src: '/public/images/fushiguro.webp',
+    src: '/images/fushiguro.webp',
     alt: 'Megumi Fushiguro',
   },
   {
-    src: '/public/images/inumaki.webp',
+    src: '/images/inumaki.webp',
     alt: 'Toge Inumaki',
   },
   {
-    src: '/public/images/itadori.webp',
+    src: '/images/itadori.webp',
     alt: 'Yuji Itadori',
   },
   {
-    src: '/public/images/kugisaki.webp',
+    src: '/images/kugisaki.webp',
     alt: 'Nobara Kugisaki',
   },
   {
-    src: '/public/images/panda.webp',
+    src: '/images/panda.webp',
     alt: 'Panda',
   },
   {
-    src: '/public/images/zen-in.webp',
+    src: '/images/zen-in.webp',
     alt: "Maki Zen'in",
   },
 ];

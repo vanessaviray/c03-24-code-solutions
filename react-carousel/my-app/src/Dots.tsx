@@ -1,23 +1,22 @@
-import { GoDotFill, GoDot } from 'react-icons/go';
+import { GoDot, GoDotFill } from 'react-icons/go';
 import { Image } from './Carousel.tsx';
 
 type Props = {
-  currentIndex: number;
-  onClick: (dotIndex: number) => void;
   images: Image[];
+  activeIndex: number;
+  onClick: (index: number) => void;
 };
 
-export function Dots({ onClick, currentIndex, images }: Props) {
+export function Dots({ images, activeIndex, onClick }: Props) {
   const dots = images.map((_, index) => (
     <button
       style={{ background: 'none' }}
+      key={index}
       onClick={() => {
         onClick(index);
-      }}
-      key={index}>
-      {index === currentIndex ? <GoDot /> : <GoDotFill />}
+      }}>
+      {index === activeIndex ? <GoDotFill /> : <GoDot />}
     </button>
   ));
-
   return <div>{dots}</div>;
 }

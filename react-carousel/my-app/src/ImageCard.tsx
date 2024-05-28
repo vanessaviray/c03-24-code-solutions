@@ -1,4 +1,4 @@
-import { Image } from './Carousel.tsx';
+import { type Image } from './Carousel.tsx';
 
 type Props = {
   displayedImage: Image;

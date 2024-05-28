@@ -5,9 +5,5 @@ type Props = {
 };
 
 export function NextButton({ onClick }: Props) {
-  return (
-    <button onClick={onClick}>
-      <FaArrowRight />
-    </button>
-  );
+  return <FaArrowRight onClick={onClick} />;
 }
