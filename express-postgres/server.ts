@@ -43,7 +43,7 @@ app.get('/api/film', async (req, res, next) => {
     const result = await db.query(sql, params);
     const film = result.rows[0];
     if (!film) {
-      throw new ClientError(404, `actor ${filmId} not found`);
+      throw new ClientError(404, `film ${filmId} not found`);
     }
     res.send(film);
   } catch (err) {
