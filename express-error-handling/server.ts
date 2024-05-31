@@ -21,7 +21,7 @@ app.post('/api/notes', async (req, res, next) => {
   try {
     const { content } = req.query;
     if (content === undefined) {
-      throw new ClientError(400, 'id must be a positive integer');
+      throw new ClientError(400, 'content is undefined');
     }
     const note = {
       id: Math.floor(100 * Math.random()),
@@ -38,10 +38,10 @@ app.put('/api/notes', async (req, res, next) => {
   try {
     const { id, content } = req.query;
     if (id === undefined) {
-      throw new ClientError(400, 'id must be a positive integer');
+      throw new ClientError(400, 'id is undefined');
     }
     if (content === undefined) {
-      throw new ClientError(400, 'id must be a positive integer');
+      throw new ClientError(400, 'content is undefined');
     }
     const note = {
       id: +id,
@@ -58,7 +58,7 @@ app.delete('/api/notes', async (req, res, next) => {
   try {
     const { id } = req.query;
     if (id === undefined) {
-      throw new ClientError(400, 'id must be a positive integer');
+      throw new ClientError(400, 'id is undefined');
     }
     await deleteNote(+id);
     res.send(`deleted ${id}`);
