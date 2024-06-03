@@ -70,9 +70,6 @@ app.post('/api/grades', async (req, res, next) => {
     `;
     const result = await db.query(sql, [name, course, score]);
     const grade = result.rows[0];
-    if (!grade) {
-      throw new ClientError(404, `grade not found`);
-    }
     res.status(201).json(grade);
   } catch (err) {
     next(err);
@@ -95,6 +92,9 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
     }
     if (!score) {
       throw new ClientError(400, 'score is required');
+    }
+    if (+score < 0 || +score > 100) {
+      throw new ClientError(400, 'valid score is required');
     }
 
     const sql = `
