@@ -1,0 +1,17 @@
+ul {
+  padding-left: 10px;
+  padding-right: 10px;
+  list-style-type: none;
+  text-align: start;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  pointer-events: all;
+}
