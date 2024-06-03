@@ -56,11 +56,11 @@ app.post('/api/grades', async (req, res, next) => {
     if (!course) {
       throw new ClientError(400, 'course is required');
     }
-    if (!score) {
-      throw new ClientError(400, 'score is required');
+    if (!Number.isInteger(score)) {
+      throw new ClientError(400, `score ${score} must be an integer`);
     }
-    if (+score < 0 || +score > 100) {
-      throw new ClientError(400, 'valid score is required');
+    if (score < 0 || score > 100) {
+      throw new ClientError(400, `score ${score} must be between 0 and 100`);
     }
 
     const sql = `
@@ -90,11 +90,11 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
     if (!course) {
       throw new ClientError(400, 'course is required');
     }
-    if (!score) {
-      throw new ClientError(400, 'score is required');
+    if (!Number.isInteger(score)) {
+      throw new ClientError(400, `score ${score} must be an integer`);
     }
-    if (+score < 0 || +score > 100) {
-      throw new ClientError(400, 'valid score is required');
+    if (score < 0 || score > 100) {
+      throw new ClientError(400, `score ${score} must be between 0 and 100`);
     }
 
     const sql = `
