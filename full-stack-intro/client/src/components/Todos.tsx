@@ -79,11 +79,9 @@ export function Todos() {
         throw new Error(`fetch error ${response.status}`);
       }
       const updatedTodo = await response.json();
-      setTodos([
-        ...todos.map((t) =>
-          t.todoId === updatedTodo.todoId ? updatedTodo : t
-        ),
-      ]);
+      setTodos(
+        todos.map((t) => (t.todoId === updatedTodo.todoId ? updatedTodo : t))
+      );
     } catch (err) {
       console.error(err);
       setError(err);
