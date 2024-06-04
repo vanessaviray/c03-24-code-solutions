@@ -21,7 +21,7 @@ export function Todos() {
   /* Implement useEffect to fetch all todos. Hints are at the bottom of the file. */
 
   useEffect(() => {
-    async function getTodos() {
+    async function readTodos() {
       try {
         const response = await fetch('/api/todos');
         if (!response.ok) {
@@ -30,13 +30,13 @@ export function Todos() {
         const todos = await response.json();
         setTodos(todos);
       } catch (err) {
-        console.error(err);
+        console.error('read error', err);
         setError(err);
       } finally {
         setIsLoading(false);
       }
     }
-    getTodos();
+    readTodos();
   }, []);
 
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
@@ -56,8 +56,8 @@ export function Todos() {
       const addedTodo = await response.json();
       setTodos([...todos, addedTodo]);
     } catch (err) {
-      console.error(err);
-      setError(err);
+      console.error('add error', err);
+      alert('Could not add');
     } finally {
       setIsLoading(false);
     }
@@ -84,7 +84,7 @@ export function Todos() {
       );
     } catch (err) {
       console.error(err);
-      setError(err);
+      alert('could not update');
     } finally {
       setIsLoading(false);
     }
